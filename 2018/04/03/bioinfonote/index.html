@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="生物信息学笔记如何自学生物信息学？生物信息学入门需要具备什么能力？ (Source: Yugi K, et al. Trends Biotechnol, 2016) 生物信息学: 导论与方法 | 北京大学高歌  魏丽萍  龙漫远  Michael.S.Waterman  Maynard Olson  裴钢  “Essentially, all models are wrong, but some">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/2018/04/03/bioinfonote/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="生物信息学笔记如何自学生物信息学？生物信息学入门需要具备什么能力？ (Source: Yugi K, et al. Trends Biotechnol, 2016) 生物信息学: 导论与方法 | 北京大学高歌  魏丽萍  龙漫远  Michael.S.Waterman  Maynard Olson  裴钢  “Essentially, all models are wrong, but some">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="https://ars.els-cdn.com/content/image/1-s2.0-S0167779915002735-gr1.jpg">
+<meta property="og:image" content="https://raw.githubusercontent.com/XIAPengfei1996/Shia/master/certificate.png">
+<meta property="og:image" content="http://care.diabetesjournals.org/content/diacare/36/5/1413/F1.large.jpg?width=800&height=600&carousel=1">
+<meta property="og:updated_time" content="2018-04-12T01:42:35.301Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo">
+<meta name="twitter:description" content="生物信息学笔记如何自学生物信息学？生物信息学入门需要具备什么能力？ (Source: Yugi K, et al. Trends Biotechnol, 2016) 生物信息学: 导论与方法 | 北京大学高歌  魏丽萍  龙漫远  Michael.S.Waterman  Maynard Olson  裴钢  “Essentially, all models are wrong, but some">
+<meta name="twitter:image" content="https://ars.els-cdn.com/content/image/1-s2.0-S0167779915002735-gr1.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/04/03/bioinfonote/"/>
+
+
+
+
+
+  <title> | Hexo</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="default">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Hexo</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/03/bioinfonote/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline"></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-03T21:29:10+08:00">
+                2018-04-03
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="生物信息学笔记"><a href="#生物信息学笔记" class="headerlink" title="生物信息学笔记"></a>生物信息学笔记</h1><p><a href="https://www.zhihu.com/question/20543692" target="_blank" rel="noopener">如何自学生物信息学？</a><br><a href="https://www.zhihu.com/question/65066161" target="_blank" rel="noopener">生物信息学入门需要具备什么能力？</a></p>
+<p><img src="https://ars.els-cdn.com/content/image/1-s2.0-S0167779915002735-gr1.jpg" alt="Image of Interaction Network"><br>(Source: Yugi K, et al. Trends Biotechnol, 2016)</p>
+<h2 id="生物信息学-导论与方法-北京大学"><a href="#生物信息学-导论与方法-北京大学" class="headerlink" title="生物信息学: 导论与方法 | 北京大学"></a>生物信息学: 导论与方法 | 北京大学</h2><p>高歌  魏丽萍  龙漫远  <em>Michael.S.Waterman  Maynard Olson  裴钢</em></p>
+<blockquote>
+<p>“Essentially, all models are wrong, but some are useful.”<br>—— George E. P. Box</p>
+</blockquote>
+<p><a href="https://www.coursera.org/learn/sheng-wu-xin-xi-xue" target="_blank" rel="noopener">Coursera</a>  <a href="http://www.chinesemooc.org/mooc/4393" target="_blank" rel="noopener">华文慕课</a>  <a href="http://mib.cbi.pku.edu.cn" target="_blank" rel="noopener">Methods in Bioinformatics</a></p>
+<ul>
+<li>生信历史</li>
+<li>Needleman-Wunsch全局比对算法</li>
+<li>Smith-Waterman局部比对算法</li>
+<li>BLAST算法</li>
+<li>马尔科夫链</li>
+<li>隐马尔科夫模型</li>
+<li>序列回帖 <code>reads mapping</code></li>
+<li>SIFT算法</li>
+<li>PolyPhen算法</li>
+<li>SAPRED算法</li>
+<li>RNAseq回帖</li>
+<li>ncRNA鉴定、差异&amp;聚类分析</li>
+<li>本体论 <code>ontology</code></li>
+<li>KOBAS分子通路鉴定</li>
+<li>演化分析</li>
+<li>各种测序原理及仪器介绍</li>
+<li>各种数据库，软件、网络工具介绍</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line">&gt;sp|P69905|HBA_HUMAN</span><br><span class="line">MVLSPADKTN VKAAWGKVGA HAGEYGAEAL ERMFLSFPTT KTYFPHFDLS</span><br><span class="line">HGSAQVKGHG KKVADALTNA VAHVDDMPNA LSALSDLHAH KLRVDPVNFK</span><br><span class="line">LLSHCLLVTL AAHLPAEFTP AVHASLDKFL ASVSTVLTSK YR</span><br><span class="line"></span><br><span class="line">&gt;sp|P60871|HBB_HUMAN</span><br><span class="line">MVHLTPEEKS AVTALWGKVN VDEVGGEALG RLLVVYPWTQ RFFESFGDLS</span><br><span class="line">TPDAVMGNPK VKAHGKKVLG AFSDGLAHLD NLKGTFATLS ELHCDKLHVD</span><br><span class="line">PENFRLLGNV LVCVLAHHFG KEFTPPVQAA YQKVVAGVAN ALAHKYH</span><br><span class="line"></span><br><span class="line">&gt;BRCA1_HUMAN </span><br><span class="line">MDLSALRVEEVQNVINAMQKILECPICLELIKEPVSTKCDHIFCKFCMLKLLNQKKGPSQ</span><br><span class="line">CPLCKNDITKRSLQESTRFSQLVEELLKIICAFQLDTGLEYANSYNFAKKENNSPEHLKD</span><br><span class="line">EVSIIQSMGYRNRAKRLLQSEPENPSLQETSLSVQLSNLGTVRTLRTKQRIQPQKTSVYI</span><br><span class="line">ELGSDSSEDTVNKATYCSVGDQELLQITPQGTRDEISLDSAKKAACEFSETDVTNTEHHQ</span><br><span class="line">PSNNDLNTTEKRAAERHPEKYQGSSVSNLHVEPCGTNTHASSLQHENSSLLLTKDRMNVE</span><br><span class="line">KAEFCNKSKQPGLARSQHNRWAGSKETCNDRRTPSTEKKVDLNADPLCERKEWNKQKLPC</span><br><span class="line">SENPRDTEDVPWITLNSSIQKVNEWFSRSDELLGSDDSHDGESESNAKVADVLDVLNEVD</span><br><span class="line">EYSGSSEKIDLLASDPHEALICKSERVHSKSVESNIEDKIFGKTYRKKASLPNLSHVTEN</span><br><span class="line">LIIGAFVTEPQIIQERPLTNKLKRKRRPTSGLHPEDFIKKADLAVQKTPEMINQGTNQTE</span><br><span class="line">QNGQVMNITNSGHENKTKGDSIQNEKNPNPIESLEKESAFKTKAEPISSSISNMELELNI</span><br><span class="line">HNSKAPKKNRLRRKSSTRHIHALELVVSRNLSPPNCTELQIDSCSSSEEIKKKKYNQMPV</span><br><span class="line">RHSRNLQLMEGKEPATGAKKSNKPNEQTSKRHDSDTFPELKLTNAPGSFTKCSNTSELKE</span><br><span class="line">FVNPSLPREEKEEKLETVKVSNNAEDPKDLMLSGERVLQTERSVESSSISLVPGTDYGTQ</span><br><span class="line">ESISLLEVSTLGKAKTEPNKCVSQCAAFENPKGLIHGCSKDNRNDTEGFKYPLGHEVNHS</span><br><span class="line">RETSIEMEESELDAQYLQNTFKVSKRQSFAPFSNPGNAEEECATFSAHSGSLKKQSPKVT</span><br><span class="line">FECEQKEENQGKNESNIKPVQTVNITAGFPVVGQKDKPVDNAKCSIKGGSRFCLSSQFRG</span><br><span class="line">NETGLITPNKHGLLQNPYRIPPLFPIKSFVKTKCKKNLLEENFEEHSMSPEREMGNENIP</span><br><span class="line">STVSTISRNNIRENVFKEASSSNINEVGSSTNEVGSSINEIGSSDENIQAELGRNRGPKL</span><br><span class="line">NAMLRLGVLQPEVYKQSLPGSNCKHPEIKKQEYEEVVQTVNTDFSPYLISDNLEQPMGSS</span><br><span class="line">HASQVCSETPDDLLDDGEIKEDTSFAENDIKESSAVFSKSVQKGELSRSPSPFTHTHLAQ</span><br><span class="line">GYRRGAKKLESSEENLSSEDEELPCFQHLLFGKVNNIPSQSTRHSTVATECLSKNTEENL</span><br><span class="line">LSLKNSLNDCSNQVILAKASQEHHLSEETKCSASLFSSQCSELEDLTANTNTQDPFLIGS</span><br><span class="line">SKQMRHQSESQGVGLSDKELVSDDEERGTGLEENNQEEQSMDSNLGEAASGCESETSVSE</span><br><span class="line">DCSGLSSQSDILTTQQRDTMQHNLIKLQQEMAELEAVLEQHGSQPSNSYPSIISDSSALE</span><br><span class="line">DLRNPEQSTSEKAVLTSQKSSEYPISQNPEGLSADKFEVSADSSTSKNKEPGVERSSPSK</span><br><span class="line">CPSLDDRWYMHSCSGSLQNRNYPSQEELIKVVDVEEQQLEESGPHDLTETSYLPRQDLEG</span><br><span class="line">TPYLESGISLFSDDPESDPSEDRAPESARVGNIPSSTSALKVPQLKVAESAQSPAAAHTT</span><br><span class="line">DTAGYNAMEESVSREKPELTASTERVNKRMSMVVSGLTPEEFMLVYKFARKHHITLTNLI</span><br><span class="line">TEETTHVVMKTDAEFVCERTLKYFLGIAGGKWVVSYFWVTQSIKERKMLNEHDFEVRGDV</span><br><span class="line">VNGRNHQGPKRARESQDRKIFRGLEICCYGPFTNMPTDQLEWMVQLCGASVVKELSSFTL</span><br><span class="line">GTGVHPIVVVQPDAWTEDNGFHAIGQMCEAPVVTREWVLDSVALYQCQELDTYLIPQIPH</span><br><span class="line">SHY</span><br><span class="line"></span><br><span class="line">&gt;21A [CPC](http://cpc.cbi.pku.edu.cn/)</span><br><span class="line">AAATAGTTGACCAAGTGTGGTGGCTCACGTAGTCCCAGCACTTTGGGAGGCTGAGGCAGGAGGATCACTTGAGCCCAGGAATTTGAGACCAGCTTGGGCAACATAGTGAGACCTCATCTCTTAAAAAAAAAAATTAGCTGGGTGTGGTAGTGCACACCTGTGGTCCCAGCTACTTTAGAGGCTGAGGTAGAGGATTGCTTGAGCCTGGGAAGTTGGGGCTGTAGTGAGCTTTGATTGCATCACTGCACTCCAGCCTGGGTGACAGAGCAAGACCCTGTCTCTAAAAAATTAAATAAATAATAAAAAAATTAAAAAGTAACTCCC</span><br></pre></td></tr></table></figure>
+<p><img src="https://raw.githubusercontent.com/XIAPengfei1996/Shia/master/certificate.png" alt="certificate"></p>
+<p><strong>从数学物理，到化学材料的科学理论突破，应用到工程界，引发信息编程等领域链式的技术革命，极大地推动了生物、医学等下游学科的发展。随着实验检测技术和试验设计的革新，人群研究逐渐能够摆脱伦理学的困境，内外暴露物质的测量方法也开始了急速地发展，直接从人类身上全面地获取有循证意义的数据成为可能。经典流行病学也将逆转被动研究黑箱问题的局面，使用生物信息学等方法，借助云储存、云计算分析海量组学数据，定量地研究全时空下暴露、分子、结局全水平的互作（interaction），彻底探清疾病机制，构建在人类医学生具有划时代意义的系统流行病学。而本就是限于伦理，“曲线救国”来研究人类疾病的动物实验，其现实意义也将大打折扣，甚至会在不久的将来只有博物馆的一席之地。</strong></p>
+<blockquote>
+<p>“Genetics Loads the Gun, Lifestyle Pulls the Trigger.”<br>—— Barbara O’Neill</p>
+</blockquote>
+<p><img src="http://care.diabetesjournals.org/content/diacare/36/5/1413/F1.large.jpg?width=800&amp;height=600&amp;carousel=1" alt="Image of Interaction Network"><br>(Source: Franks PW, et al. Diabetes Care, 2013)</p>
+<blockquote>
+<p>从暴露组学发展到打开流行病学“黑箱子”的遗传组学、代谢组学等，系统流行病学可以多水平、多层次地考虑疾病的发生机制；除了机理研究之外，健康的社会决定因素和遗传易感性的影响因素研究，都进一步拓展了病因学研究的广度和深度。<br>——<a href="http://sph.pku.edu.cn/content/?2249.html" target="_blank" rel="noopener">李立明</a></p>
+</blockquote>
+<h2 id="华中科技大学同济医学院公共卫生学院流行病学与卫生统计学系生物信息学方向导师"><a href="#华中科技大学同济医学院公共卫生学院流行病学与卫生统计学系生物信息学方向导师" class="headerlink" title="华中科技大学同济医学院公共卫生学院流行病学与卫生统计学系生物信息学方向导师"></a>华中科技大学同济医学院公共卫生学院流行病学与卫生统计学系生物信息学方向导师</h2><ul>
+<li><a href="http://gwxy.tjmu.edu.cn/info/1087/1796.htm" target="_blank" rel="noopener">龚静 博士</a></li>
+<li><a href="http://chaolongwang.github.io" target="_blank" rel="noopener">王超龙 教授</a></li>
+</ul>
+<h2 id="参考书目"><a href="#参考书目" class="headerlink" title="参考书目"></a>参考书目</h2><ol>
+<li>《生物信息学》, 李霞, 雷健波; 人民卫生出版社, 2015</li>
+<li>《概率论与数理统计》, 盛骤, 谢式千, 潘承毅; 高等教育出版社, 2008</li>
+</ol>
+<h2 id="编程语言"><a href="#编程语言" class="headerlink" title="编程语言"></a>编程语言</h2><ul>
+<li>Linux Shell / Bash<ul>
+<li><a href="http://linux.vbird.org/linux_basic/" target="_blank" rel="noopener">鳥哥的Linux私房菜-基礎學習篇</a></li>
+<li><a href="https://legacy.gitbook.com/book/wizardforcel/vbird-linux-basic-4e/details" target="_blank" rel="noopener">鸟哥的Linux私房菜：基础学习篇 第四版</a></li>
+</ul>
+</li>
+<li>Git<ul>
+<li><a href="http://iissnan.com/progit/" target="_blank" rel="noopener">《Pro Git》</a></li>
+</ul>
+</li>
+<li>R<ul>
+<li>《R语言实战》</li>
+<li>《R语言与Bioconductor生物信息学应用》</li>
+</ul>
+</li>
+<li>Perl<ul>
+<li>《Perl语言入门》/《Learning Perl》传说中的“小骆驼”</li>
+</ul>
+</li>
+<li>Python</li>
+<li>C</li>
+</ul>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/04/03/transcriptome/" rel="next" title="">
+                <i class="fa fa-chevron-left"></i> 
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/04/03/lncRNA/" rel="prev" title="">
+                 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">John Doe</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#生物信息学笔记"><span class="nav-number">1.</span> <span class="nav-text">生物信息学笔记</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#生物信息学-导论与方法-北京大学"><span class="nav-number">1.1.</span> <span class="nav-text">生物信息学: 导论与方法 | 北京大学</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#华中科技大学同济医学院公共卫生学院流行病学与卫生统计学系生物信息学方向导师"><span class="nav-number">1.2.</span> <span class="nav-text">华中科技大学同济医学院公共卫生学院流行病学与卫生统计学系生物信息学方向导师</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考书目"><span class="nav-number">1.3.</span> <span class="nav-text">参考书目</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#编程语言"><span class="nav-number">1.4.</span> <span class="nav-text">编程语言</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">John Doe</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
