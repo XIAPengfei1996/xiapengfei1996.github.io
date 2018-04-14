@@ -970,8 +970,9 @@
       
         
           
-            <h1 id="生物信息学实战"><a href="#生物信息学实战" class="headerlink" title="生物信息学实战"></a>生物信息学实战</h1><h2 id="转录组入门"><a href="#转录组入门" class="headerlink" title="转录组入门"></a><a href="https://xiapengfei1996.github.io/bioinfo/transcriptome" target="_blank" rel="noopener">转录组入门</a></h2><h3 id="1-计算机资源的准备"><a href="#1-计算机资源的准备" class="headerlink" title="1. 计算机资源的准备"></a>1. 计算机资源的准备</h3><ul>
-<li><p>系统环境及硬件配置： </p>
+            <h1 id="生物信息学实战"><a href="#生物信息学实战" class="headerlink" title="生物信息学实战"></a>生物信息学实战</h1><h2 id="转录组入门"><a href="#转录组入门" class="headerlink" title="转录组入门"></a><a href="https://xiapengfei1996.github.io/bioinfo/transcriptome" target="_blank" rel="noopener">转录组入门</a></h2><p><a href="https://mp.weixin.qq.com/s?__biz=MzAxMDkxODM1Ng==&amp;mid=2247484843&amp;idx=1&amp;sn=95370393e9d16e09e854adce78c94523&amp;chksm=9b484510ac3fcc064b1bfc19f5cc73a4fbc113a840a40c3a95632127c54f570d9d66550ebc22&amp;scene=21#wechat_redirect" target="_blank" rel="noopener">任务清单</a>  <a href="https://mp.weixin.qq.com/s?__biz=MzAxMDkxODM1Ng==&amp;mid=2247485440&amp;idx=1&amp;sn=392c8649e334af99ac60e903aaec01e9&amp;chksm=9b4848bbac3fc1ad02ac2f11fd9f4440fb13cffc063d19da56fe34317d0621a4972ec26a41d1&amp;mpshare=1&amp;scene=23&amp;srcid=04136Qg8PRlWmG5bwOcYtjwq%23rd" target="_blank" rel="noopener">参考流程</a></p>
+<h3 id="计算机资源的准备"><a href="#计算机资源的准备" class="headerlink" title="计算机资源的准备"></a>计算机资源的准备</h3><ul>
+<li><p>系统环境及硬件配置：</p>
 <ul>
 <li>macOS High Sierra 10.13.4</li>
 <li>MacBool Air (13-inch, Early 2015)</li>
@@ -1017,15 +1018,21 @@
 <li><p>添加清华源镜像；</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">conda config - add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/</span><br><span class="line">conda config - add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge/</span><br><span class="line">conda config - add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/msys2/</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>显示已添加的源镜像地址</p>
+<li><p>显示已添加的源镜像地址；</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda config --set show_channel_urls yes</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>安装sratoolkit,fastqc,hisats,samtools,htseq-count,R,Rstudio软件；</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">conda install -c bioconda sra-tools</span><br><span class="line">conda install -c bioconda fastqc</span><br><span class="line">conda install -c bioconda hisat2</span><br><span class="line">conda install -c bioconda samtools</span><br><span class="line">conda install -c bioconda htseq</span><br><span class="line"><span class="meta">#</span><span class="bash"> 本机已安装过R和RStudio,故未重复下载</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> conda install r</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> conda install rstudio</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">conda install -c bioconda sra-tools</span><br><span class="line">conda install -c bioconda fastqc</span><br><span class="line">conda install -c bioconda hisat2</span><br><span class="line">conda install -c bioconda samtools</span><br><span class="line">conda install -c bioconda htseq</span><br><span class="line"><span class="meta">#</span> 本机已安装过R和RStudio,故未重复下载</span><br><span class="line"><span class="meta">#</span> conda install r</span><br><span class="line"><span class="meta">#</span> conda install rstudio</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<h3 id="2-读文章拿到测序数据"><a href="#2-读文章拿到测序数据" class="headerlink" title="2. 读文章拿到测序数据"></a>2. 读文章拿到测序数据</h3><ul>
-<li>实战学习示例文章；<br><a href="https://www.nature.com/articles/ncomms13347" target="_blank" rel="noopener">AKAP95 regulates splicing through scaffolding RNAs and RNA processing factors. Nat Commun 2016 Nov 8;7:13347. PMID: 27824034</a></li>
+<h3 id="读文章拿到测序数据"><a href="#读文章拿到测序数据" class="headerlink" title="读文章拿到测序数据"></a>读文章拿到测序数据</h3><ul>
+<li><p>检索实战学习示例文章；<br><a href="https://www.nature.com/articles/ncomms13347" target="_blank" rel="noopener">AKAP95 regulates splicing through scaffolding RNAs and RNA processing factors. Nat Commun 2016 Nov 8;7:13347. PMID: 27824034</a></p>
+</li>
+<li><p>阅读文章Methods部分，尤Bioinformatic analyses和Data availability部分；</p>
+<blockquote>
+<p>Bioinformatic analyses<br>We obtained 35–55 million of paired 51 bp reads for each sample. The investigator was blinded to sample identities when performing bioinformatic analyses. All the reads were mapped to the <strong>human reference genome (GRCh37/hg19)</strong> using <strong>TopHat (v2.0.13)</strong> with a <strong>gene transfer file (GTF version GRCh37.70)</strong>. <strong>Low quality mapped reads (MQ&gt;30)</strong> were removed from the analysis. The <strong>mean insert sizes and the s.d.’s</strong> were calculated using <a href="http://broadinstitute.github.io/picard/" target="_blank" rel="noopener"><strong>Picard-tools (v1.126)</strong></a>.<br>For mRNA-Seq, <strong>read count tables</strong> were generated using <strong>HTSeq (v0.6.0)53</strong> and <strong>deferential expression (DE) analysis of genes</strong> were performed using <strong>DESeq (v3.0)54</strong>. <strong>Deferential exon usage</strong> was performed using <strong>DEXSeq (v3.1)29</strong>. Two independent biological repeats for control and KD were included in both DEseq and DEXseq. For 293 cells, the mRNA-seq results of the control samples include (1) those from the doxycycline-treated parental Flp-In T-REx 293 cells by us and (2) those from the doxycycline-treated control Flp-In T-REx 293 cells performed by another group unrelated to us (sample GSM1095127 in GSE44976)31, and the two AKAP95 KD samples were from the two different clones (miR#8 and miR#12) of Flp-In T-REx 293 cells stably expressing AKAP95 microRNAs after doxycycline treatment. For mouse ES cells, the two biological repeats for both control and shRNA#1-mediated Akap95 KD were independently generated by two different persons in our lab. The <strong>read per million normalized BigWig files</strong> were generated using <strong>BEDTools (v2.17.0)55</strong> and <strong>bedGraphToBigWig tool (v4)</strong>. All the <strong>downstream statistical analyses</strong> and generating <strong>plots</strong> were performed in <a href="http://www.r-project.org/" target="_blank" rel="noopener"><strong>R (v3.1.1)</strong></a>. <strong>Gene ontology analysis</strong> was performed at <a href="http://david.ncifcrf.gov/" target="_blank" rel="noopener"><strong>DAVID</strong></a>.<br>For RIP-Seq, mapped files were passed to Model-based Analysis of ChIP-Seq (MACS) (v1.4.2 20120305)56 for peak calling and <a href="http://homer.salk.edu/homer/" target="_blank" rel="noopener">HOMER (vv3.12, 6-8-2012)</a>57 was used for Motif finding. Bedgraph files generated by MACS were then normalized based on read per million and converted to BigWig files using bedGraphToBigWig. The input RNA-seq files were not subject to MACS. The genomic regions for annotation (intergenic regions, exons, UTRs, distal and proximal introns) were extracted from the GTF file used above. Peak annotations and coverage calculations for these genomic regions were performed using Bedtools and SAMtools (v0.1.18)58, respectively. Profile plots were generated by ngs.plot (v2.47)59.</p>
+</blockquote>
+</li>
 </ul>
 <blockquote>
 <p>Data availability<br>The RIP-seq an RNA-seq data have been deposited in the Gene Expression Omnibus database, with accession code <strong>GSE81916</strong>. All other data is available from the author upon reasonable request.</p>
@@ -1039,15 +1046,72 @@
 <ul>
 <li><p>阅读网页Overall design部分介绍得知，属于RNA-seq数据的是第9-15个样品；</p>
 </li>
-<li><p>在<a href="https://trace.ncbi.nlm.nih.gov/Traces/sra/sra.cgi?view=search_obj" target="_blank" rel="noopener">SRA</a>上查找<a href="https://trace.ncbi.nlm.nih.gov/Traces/study/?acc=SRP075747&amp;go=go" target="_blank" rel="noopener"><strong>SRP075747</strong></a>（或<a href="https://trace.ncbi.nlm.nih.gov/Traces/study/?acc=PRJNA323422" target="_blank" rel="noopener"><strong>PRJNA323422</strong></a>）,查找得其第9-15个样品，即<strong>GSM2177723</strong>到<strong>GSM2177729</strong>对应的SRA号为<strong>SRR3589956</strong>到<strong>SRR3589962</strong>；</p>
+<li><p>在<a href="https://trace.ncbi.nlm.nih.gov/Traces/sra/sra.cgi?view=search_obj" target="_blank" rel="noopener">SRA</a>上查找<a href="https://trace.ncbi.nlm.nih.gov/Traces/study/?acc=SRP075747&amp;go=go" target="_blank" rel="noopener"><strong>SRP075747</strong></a>（或<a href="https://trace.ncbi.nlm.nih.gov/Traces/study/?acc=PRJNA323422" target="_blank" rel="noopener"><strong>PRJNA323422</strong></a>）,查找得其第9-15个样品，即<strong>GSM2177723</strong>到<strong>GSM2177729</strong>对应的SRA号为<strong>SRR3589956</strong>到<strong>SRR3589962</strong>；<br><em>注意理解GEO/SRA数据库的数据存放形式</em></p>
 </li>
-<li><p>安装axel来下载数据比wget及prefetch更快；<br>（Aspera只有Windows系统下的client）</p>
+<li><p>安装axel来下载数据比wget及prefetch更快；（也可使用<a href="http://www.bio-info-trainee.com/bioconductor_China/software/GEOquery.html" target="_blank" rel="noopener">GEOquery</a>下载）<br>（Aspera只有Windows系统下的client）</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install axel</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>循环语句实现数据下载</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">for i in &#123;56..62&#125;</span><br><span class="line">do</span><br><span class="line">axel ftp://ftp-trace.ncbi.nih.gov/sra/sra-instant/reads/ByStudy/sra/SRP/SRP075/SRP075747/SRR35899$i/SRR35899$i.sra</span><br><span class="line">done</span><br></pre></td></tr></table></figure>
+<li><p>循环axel语句实现数据下载；<br>（<strong>2200+KB/s，用时约两小时</strong>）</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">for i in &#123;56..62&#125;  # &#123;56..62&#125;与`seq 57 62`等价</span><br><span class="line">do</span><br><span class="line">  axel ftp://ftp-trace.ncbi.nih.gov/sra/sra-instant/reads/ByStudy/sra/SRP/SRP075/SRP075747/SRR35899$i/SRR35899$i.sra</span><br><span class="line">done</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
+<h3 id="了解fastq测序数据"><a href="#了解fastq测序数据" class="headerlink" title="了解fastq测序数据"></a>了解fastq测序数据</h3><ul>
+<li><p>循环sratoolkit（sra-tools）中fastq-dump语句把sra文件转换为fastq格式；<br>（<strong>用时约三个半小时</strong>）<br>注意这一步不显示百分数进度条！</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">fastq-dump -h # 查看帮助文件</span><br><span class="line">for i in &#123;56..62&#125;</span><br><span class="line">do</span><br><span class="line">  fastq-dump --gzip --split-3 -O /Users/xiapengfei/ -A SRR35899$&#123;i&#125;.sra</span><br><span class="line">done</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>循环fastqc语句测试测序文件的质量；(<a href="http://fbb84b26.wiz03.com/share/s/3XK4IC0cm4CL22pU-r1HPcQQ1iRTvV2GwkwL2AaxYi2fXHP7" target="_blank" rel="noopener">MultiQC可以批量显示质控结果</a>）<br>（<strong>4线程，用时约25分钟</strong>）</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">for i in &#123;56..62&#125;</span><br><span class="line">do</span><br><span class="line">  fastqc -t 4 -O /Users/xiapengfei/ SRR35899$i.sra_1.fastq.gz SRR35899$i.sra_2.fastq.gz</span><br><span class="line">done</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>_<a href="https://github.com/XIAPengfei1996/Shia/tree/master/bioinfo/fastqc_html" target="_blank" rel="noopener">理解测序reads，GC含量，质量值，接头，index，fastqc的全部报告</a>_</p>
+<p><a href="http://www.bio-info-trainee.com/2275.html" target="_blank" rel="noopener"><strong>经验教训</strong></a></p>
+<h3 id="了解参考基因组及基因注释"><a href="#了解参考基因组及基因注释" class="headerlink" title="了解参考基因组及基因注释"></a>了解参考基因组及基因注释</h3><ul>
+<li>在<a href="http://genome.ucsc.edu/index.html" target="_blank" rel="noopener">UCSC</a>中打开Downloads中Genome Data页面，点击Human选择Feb. 2009 (GRCh37/hg19)栏下Full data set，下拉找到chromFa.tar.gz文件；</li>
+</ul>
+<blockquote>
+<p>chromFa.tar.gz - The assembly sequence in one file per chromosome.<br>    Repeats from RepeatMasker and Tandem Repeats Finder (with period<br>    of 12 or less) are shown in lower case; non-repeating sequence is<br>    shown in upper case.</p>
+</blockquote>
+<ul>
+<li><p>axel命令下载hg19参考基因组数据；<br>（<strong>400+KB/s，用时约35分钟</strong>）</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">axel http://hgdownload.soe.ucsc.edu/goldenPath/hg19/bigZips/chromFa.tar.gz</span><br><span class="line">tar zxvf chromFa.tar.gz  # 解压该文件</span><br><span class="line">cat *.fa &gt; hg19.fa  # 将解压文件合并为一个文件</span><br><span class="line">rm chr*.fa  # 删除无关数据</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>从<a href="http://www.gencodegenes.org" target="_blank" rel="noopener">gencode数据库</a>中打开Data中Human栏内<a href="https://www.gencodegenes.org/releases/grch37_mapped_releases.html" target="_blank" rel="noopener">GRCh37-mapped Releases</a>，点击GENCODE release栏下最新版的数据，下载基因注释文件；<br>（<strong>用时5分钟</strong>)</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">axel ftp://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_28/GRCh37_mapping/gencode.v28lift37.annotation.gtf.gz  # GTF格式主要是用来描述基因的注释</span><br><span class="line">axel ftp://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_28/GRCh37_mapping/gencode.v28lift37.annotation.gff3.gz  # GFF文件是一种用来描述基因组特征的文件，现在我们所使用的大部分都是第三版（GFF3）</span><br><span class="line"><span class="meta">#</span> gzip -d解压并删除压缩包</span><br><span class="line">gzip -d gencode.v28lift37.annotation.gtf.gz</span><br><span class="line">gzip -d gencode.v28lift37.annotation.gff3.gz</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><em>- 用IGV去查看感兴趣的基因的结构；</em></p>
+<ul>
+<li>下载安装<a href="https://java.com/en/download/mac_download.jsp" target="_blank" rel="noopener">JAVA 8</a>；</li>
+<li>下载<a href="http://software.broadinstitute.org/software/igv/download" target="_blank" rel="noopener">igv</a>直接打开；</li>
+<li>在菜单栏Genomes中选择Load Genome from File…导入hg19.fa文件；</li>
+<li>在菜单栏Tools中打开Run igvtools…界面，在Command栏中选择Sort，在Input File栏中导入gtf文件后运行；</li>
+<li>在菜单栏File中选择Load from File…导入sorted.gtf文件并index；</li>
+<li>在工具栏输入查找的基因名词（如：TP53）或染色体定位（如chr17:7,569,720-7,592,868)查看<a href="https://github.com/XIAPengfei1996/Shia/tree/master/bioinfo/igv" target="_blank" rel="noopener">可视化结构</a>；</li>
+</ul>
+<h3 id="序列比对"><a href="#序列比对" class="headerlink" title="序列比对"></a>序列比对</h3><ul>
+<li><p>从<a href="http://ccb.jhu.edu/software/hisat2/index.shtml" target="_blank" rel="noopener">HISAT2</a>的主页下载index文件；<br>（<strong>400+KB/s，用时约两个半+小时</strong>）</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">axel ftp://ftp.ccb.jhu.edu/pub/infphilo/hisat2/data/hg19.tar.gz  # 下载人类的索引</span><br><span class="line">axel ftp://ftp.ccb.jhu.edu/pub/infphilo/hisat2/data/mm10.tar.gz  # 下载小鼠的索引</span><br><span class="line">tar -zxvf *.tar.gz  # 解压压缩包</span><br><span class="line">rm -rf *.tar.gz  # 删除压缩包</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>把fastq格式的reads比对上去得到sam文件；<br>注意这一步也不显示百分数进度条！</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> 比对人类的索引</span><br><span class="line">for i in &#123;56..58&#125;</span><br><span class="line">do</span><br><span class="line">  hisat2 -t -x /Users/xiapengfei/hg19/genome -1 SRR35899$&#123;i&#125;.sra_1.fastq.gz -2 SRR35899$&#123;i&#125;.sra_2.fastq.gz -S SRR35899$&#123;i&#125;.sam</span><br><span class="line">done</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> 比对小鼠的索引</span><br><span class="line">for i in &#123;59..62&#125;</span><br><span class="line">do</span><br><span class="line">  hisat2 -t -x /Users/xiapengfei/hg19/genome -1 SRR35899$&#123;i&#125;.sra_1.fastq.gz -2 SRR35899$&#123;i&#125;.sra_2.fastq.gz -S SRR35899$&#123;i&#125;.sam</span><br><span class="line">done</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>用samtools把sam文件转为bam文件，并且排序(注意N和P两种排序区别)索引好；</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">for i in &#123;56..62&#125;</span><br><span class="line">do </span><br><span class="line">  samtools view -S SRR35899$&#123;i&#125;.sam -b &gt; SRR35899$&#123;i&#125;.bam  # 将比对后的sam格式文件转换成bam文件</span><br><span class="line">  samtools sort SRR35899$&#123;i&#125;.bam -o SRR35899$&#123;i&#125;.sorted.bam  # 将所有的bam文件进行排序</span><br><span class="line">  samtools index SRR35899$&#123;i&#125;_sorted.bam # 将所有的排序文件建立索引</span><br><span class="line">done</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><em>samtools sort默认按照染色体位置进行排序，-n参数根据read名进行排序。-t参数根据TAG进行排序</em></p>
+<ul>
+<li>对bam文件进行质控；<br>可以使用<a href="http://rseqc.sourceforge.net/" target="_blank" rel="noopener">RSeQC</a><br><em>RSeQC的安装，需要预先安装R，Python2.7，gcc，<a href="http://www.jianshu.com/p/14fd4de54402" target="_blank" rel="noopener">numpy</a></em><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">pip install RSeQC</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> &#123;<span class="number">56.</span><span class="number">.62</span>&#125;</span><br><span class="line">do</span><br><span class="line">  bam_stat.py -i SRR35899$&#123;i&#125;_sorted.bam</span><br><span class="line">done</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><a href="http://broadinstitute.github.io/picard/" target="_blank" rel="noopener">Picard</a><br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">conda install ucsc-gtftogenepred</span><br><span class="line">gtfToGenePred -genePredExt -ignoreGroupsWithoutExons -geneNameAsName2 gencode.v26lift37.annotation.gtf gencode.v26lift37.annotation.gpd</span><br><span class="line">wget http:<span class="comment">//hgdownload.soe.ucsc.edu/goldenPath/hg19/database/refFlat.txt.gz</span></span><br><span class="line">gzip -d refFlat.txt.gz</span><br><span class="line">java -jar ~/biosoft/picard_2.8.0/picard.jar CollectRnaSeqMetrics I=Homo_sapiens_Control_293_cell_sorted.bam O=Homo_sapiens_Control_293_cell_RNA_Metrics REF_FLAT=~/rna_seq/data/reference/genome/hg19/refFlat.txt STRAND_SPECIFICITY=NONE</span><br></pre></td></tr></table></figure></p>
+<p>或<a href="http://qualimap.bioinfo.cipf.es/" target="_blank" rel="noopener">Qualimap</a>等工具</p>
+<ul>
+<li>IGV载入参考序列，注释和BAM文件查看略；</li>
+</ul>
+<h3 id="reads计数"><a href="#reads计数" class="headerlink" title="reads计数"></a>reads计数</h3><p>实现这个功能的软件也很多，还是烦请大家先自己搜索几个教程，入门请统一用htseq-count，对每个样本都会输出一个表达量文件。</p>
+<p>需要用脚本合并所有的样本为表达矩阵。参考：生信编程直播第四题：多个同样的行列式文件合并起来</p>
+<p>对这个表达矩阵可以自己简单在excel或者R里面摸索，求平均值，方差。<br>看看一些生物学意义特殊的基因表现如何，比如GAPDH,β-ACTIN等等。</p>
 <h2 id="ChIP-seq基础入门"><a href="#ChIP-seq基础入门" class="headerlink" title="ChIP-seq基础入门"></a><a href="https://xiapengfei1996.github.io/bioinfo/ChIP-seq" target="_blank" rel="noopener">ChIP-seq基础入门</a></h2><h2 id="450K甲基化芯片数据处理"><a href="#450K甲基化芯片数据处理" class="headerlink" title="450K甲基化芯片数据处理"></a><a href="https://xiapengfei1996.github.io/bioinfo/Methylation450K_BeadChip" target="_blank" rel="noopener">450K甲基化芯片数据处理</a></h2><h2 id="lncRNA数据分析"><a href="#lncRNA数据分析" class="headerlink" title="lncRNA数据分析"></a><a href="https://xiapengfei1996.github.io/bioinfo/lncRNA" target="_blank" rel="noopener">lncRNA数据分析</a></h2>
           
         
