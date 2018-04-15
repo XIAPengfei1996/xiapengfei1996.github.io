@@ -86,7 +86,7 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="生物信息学实战转录组入门任务清单  参考流程 计算机资源的准备 系统环境及硬件配置：  macOS High Sierra 10.13.4 MacBool Air (13-inch, Early 2015) 处理器   1.6GHz intel Core i5 内存  4GB 1600MHz DDR3 存储  128G uname -a  x86_64   安装Homebrew包管理，要求预先安装">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-04-15T07:27:24.483Z">
+<meta property="og:updated_time" content="2018-04-15T07:53:46.324Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo">
 <meta name="twitter:description" content="生物信息学实战转录组入门任务清单  参考流程 计算机资源的准备 系统环境及硬件配置：  macOS High Sierra 10.13.4 MacBool Air (13-inch, Early 2015) 处理器   1.6GHz intel Core i5 内存  4GB 1600MHz DDR3 存储  128G uname -a  x86_64   安装Homebrew包管理，要求预先安装">
@@ -477,7 +477,7 @@
 <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">library</span>(clusterProfiler)</span><br><span class="line">gene_list &lt;- mapIds(org.hs, keys = row.names(deseq2.sig),</span><br><span class="line">  column = <span class="string">"ENTREZID"</span>, keytype = <span class="string">"ENSEMBL"</span> )</span><br><span class="line">kk &lt;- enrichKEGG(gene_list, organism=<span class="string">"hsa"</span>,</span><br><span class="line">  keyType = <span class="string">"ncbi-geneid"</span>,</span><br><span class="line">  pvalueCutoff=<span class="number">0.05</span>, pAdjustMethod=<span class="string">"BH"</span>,</span><br><span class="line">  qvalueCutoff=<span class="number">0.1</span>)</span><br><span class="line">head(summary(kk))</span><br><span class="line">dotplot(kk)  <span class="comment"># 气泡图</span></span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<h3 id="致谢"><a href="#致谢" class="headerlink" title="致谢"></a>致谢</h3><p>感谢曾建明在其建立的生信技能树平台发起转录组入门实战项目；<br>感谢徐洲更、沈梦圆、青山屋主等在各平台上热心分享经验以资参考；<br>感谢所有论文作者和数据共享平台开放数据获取途径；<br>获益良多，相见恨晚！</p>
+<h3 id="致谢"><a href="#致谢" class="headerlink" title="致谢"></a>致谢</h3><p>感谢曾健明在其建立的生信技能树平台发起转录组入门实战项目；<br>感谢徐洲更、沈梦圆、青山屋主等在各平台上热心分享经验以资参考；<br>感谢所有论文作者和数据共享平台开放数据获取途径；<br>获益良多，相见恨晚！</p>
 <h3 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h3><p>《RNA-seq数据分析实用方法》<br>（《RNA-seq Data Analysis A Practical Approach》）</p>
 <h2 id="ChIP-seq基础入门"><a href="#ChIP-seq基础入门" class="headerlink" title="ChIP-seq基础入门"></a><a href="https://xiapengfei1996.github.io/bioinfo/ChIP-seq" target="_blank" rel="noopener">ChIP-seq基础入门</a></h2><h2 id="450K甲基化芯片数据处理"><a href="#450K甲基化芯片数据处理" class="headerlink" title="450K甲基化芯片数据处理"></a><a href="https://xiapengfei1996.github.io/bioinfo/Methylation450K_BeadChip" target="_blank" rel="noopener">450K甲基化芯片数据处理</a></h2><h2 id="lncRNA数据分析"><a href="#lncRNA数据分析" class="headerlink" title="lncRNA数据分析"></a><a href="https://xiapengfei1996.github.io/bioinfo/lncRNA" target="_blank" rel="noopener">lncRNA数据分析</a></h2>
       
