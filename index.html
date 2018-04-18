@@ -305,7 +305,7 @@
 <p>目前在代谢组学中运用较多的多元统计分析方法，包括主成分分析（Principal component analysis, PCA）、层次聚类分析（Hierarchical clustering analysis, HCA）、非线性映射（Nonlinear innuendo analysis, NLM）、分级聚类法（hierarchical cluster analysis, HCA）等非监督分类方法，以及K最邻近法（K-nearest neighbor classification method, K-NN）、偏最小二乘法-判别分析（Partial least squares projections to latent structures - discriminant analysis, PLS-DA）、正交偏最小二乘法-判别分析（Orthogonal projections to latent structures - discriminant analysis, OPLS-DA）、人工神经网络（Artificial Neural Network, ANN）、支持向量机（Support Vector Machine, SVM）等监督分类方法。篇幅所限，有关这些方法的具体内容和意义请参考相关文献。</p>
 <p>代谢组学数据分析最常用的软件SIMCA是1987年由瑞典Umetrics公司研究开发的一款多元变量统计分析软件。官方网站随便一个课程视频都是一、两千美刀，其他学习资源目前也都限于各生物公司的培训资料，同样价格不菲。这里我利用SIMCA官方的教程和数据操作一遍完整的流程以飨读者。</p>
 <h2 id="下载并安装软件"><a href="#下载并安装软件" class="headerlink" title="下载并安装软件"></a>下载并安装软件</h2><ul>
-<li><a href="http://landing.umetrics.com/downloads-simca" target="_blank" rel="noopener">官方网站的下载页面</a>提供了30天免费试用版SIMCA，当前更新到第15版；下载解压得到.exe格式文件，安装后即可在Windows系统上运行。由于之前为了给转录组入门实战数据腾位置，我删掉了苹果机上的Windows双系统，这次我将临时在Parallels Desktop 13试用版虚拟机上运行Windows 10系统来<br>进行操作。</li>
+<li><a href="http://landing.umetrics.com/downloads-simca" target="_blank" rel="noopener">官方网站的下载页面</a>提供了30天免费试用版SIMCA，当前更新到第15版；下载解压得到.exe格式文件，安装后即可在Windows系统上运行。由于之前为了给转录组入门实战数据腾位置，我删掉了苹果机上的Windows双系统，这次我将临时在Parallels Desktop 13试用版虚拟机上运行Windows 10系统来进行操作。</li>
 </ul>
 <h2 id="教程及数据"><a href="#教程及数据" class="headerlink" title="教程及数据"></a>教程及数据</h2><ul>
 <li><a href="http://landing.umetrics.com/downloads-simca" target="_blank" rel="noopener">官网下载页</a>虽然也提供了官方教材<a href="https://github.com/XIAPengfei1996/Shia/raw/master/SIMCA/Analysing_NMR_metabolomics_data_using_OPLS-DA.pdf" target="_blank" rel="noopener">Analysing_NMR_metabolomics_data_using_OPLS-DA.pdf</a>，但是和数据<a href="https://github.com/XIAPengfei1996/Shia/raw/master/SIMCA/NMR%20METABOLOMICS.xls" target="_blank" rel="noopener">NMR_METABOLOMICS.xls</a>一样都非常不便下载，不过好在网上随便搜索一下也能找到很多流传的资源。方便起见，我上传到了我的GitHub里面，点击文件标题名就可以直接下载。</li>
@@ -328,7 +328,7 @@
 <p>为了便于分析，这里我们只选取前3个主成分，可以通过点击<code>Autofit</code>右侧的<code>remove</code>删去多余的主成分。</p>
 <p><img src="https://raw.githubusercontent.com/XIAPengfei1996/Shia/master/SIMCA/10_remove.png" alt="10_remove"></p>
 <p>如果误删成分，可以点击<code>remove</code>上方的<code>add</code>恢复。（我没有点错！我只是为了给大家试错，对，没错，就是这样！）<br>最后的结果应该是这样：</p>
-<p><img src="https://raw.githubusercontent.com/XIAPengfei1996/Shia/master/SIMCA/.png" alt="11_component"></p>
+<p><img src="https://raw.githubusercontent.com/XIAPengfei1996/Shia/master/SIMCA/11_component.png" alt="11_component"></p>
 <p>点击上方工具栏中的<code>DModX</code>可以选择生成折线图或直方图查看离群值。</p>
 <p><img src="https://raw.githubusercontent.com/XIAPengfei1996/Shia/master/SIMCA/12_DModX.png" alt="12_DModX"></p>
 <p>点击上方工具栏中的<code>Scores</code>可以选择<code>Scatter</code>生成以第一主成分t1和第二主成分t2分别为横纵坐标的t1-t2得分图。</p>
@@ -371,12 +371,12 @@
 <p>R2Y(cum) 是模型所解释Y的总变异, 此处为0.977；</p>
 <p>Q2(cum)衡量模型预测好坏，此处为0.941；</p>
 <p><strong>预测变异 = X变异中与Y相关的部分</strong></p>
-<p>A代表于X和Y之间的相关主成分的数量。如果仅使用一个响应向量，则A总是1。</p>
-<p>R2X衡量X变异中与Y相关部分，这里是0.157。</p>
+<p>A代表于X和Y之间的相关主成分的数量。如果仅使用一个响应向量，则A总是1；</p>
+<p>R2X衡量X变异中与Y相关部分，这里是0.157；</p>
 <p><strong>正交变异 = X变异中与Y无关的部分</strong></p>
-<p>A在此对应于不相关（正交）主成分的数量。每个正交分量都被表示出来并且可以被单独解释。</p>
-<p>R2X是衡量X变异中与Y不相关的部分。每个主成分的信息都被分别表示出来。</p>
-<p>首行中粗体的R2X（cum）是X变异中与Y无关部分的总和，此处为0.613。</p>
+<p>A在此对应于不相关（正交）主成分的数量。每个正交分量都被表示出来并且可以被单独解释；</p>
+<p>R2X是衡量X变异中与Y不相关的部分。每个主成分的信息都被分别表示出来；</p>
+<p>首行中粗体的R2X（cum）是X变异中与Y无关部分的总和，此处为0.613；</p>
 <p>噪声 = 1- 0.157 – 0.613 = 0.23 = 23%</p>
 <h2 id="补充"><a href="#补充" class="headerlink" title="_补充_"></a>_补充_</h2><h3 id="响应排序检验"><a href="#响应排序检验" class="headerlink" title="响应排序检验"></a>响应排序检验</h3><p>点击上方菜单栏中的<code>Analyze</code>，点击工具栏中的<code>Permutations</code>，在<code>Permutation Plot</code>页面中<code>Number of permutations to</code>项选择<code>999</code>。</p>
 <p><img src="https://raw.githubusercontent.com/XIAPengfei1996/Shia/master/SIMCA/29_permutatuons.png" alt="29_permutatuons"></p>
